@@ -21,6 +21,10 @@ class Assignment11ApplicationTests {
 			 ObjectInputStream objectInputStream = new ObjectInputStream(fileInputStream);) {
 			Object transactions = (List<Transaction>) objectInputStream.readObject();
 			System.out.println(transactions.getClass());
+			for(Transaction transaction : (List<Transaction>)transactions)
+			{
+				System.out.println(transaction.getId());
+			}
 		} catch (IOException | ClassNotFoundException e) {
 			e.printStackTrace();
 		} 

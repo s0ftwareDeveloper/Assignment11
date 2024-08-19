@@ -11,3 +11,6 @@ table th {
   color: white;
   background-color: black;
 }
+.inline-block-span {
+  display: inline-block;
+}
