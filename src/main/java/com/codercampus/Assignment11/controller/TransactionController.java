@@ -36,7 +36,12 @@ public class TransactionController {
     }
 
     @PostMapping("/transactions")
-    public String postData(){
+    public String postTransactions(){
         return "redirect:/transactions";
+    }
+
+    @PostMapping("/transactions/{transactionId}")
+    public String postTransactionById (Transaction transaction) {
+        return "redirect:/persons/" + transaction.getId();
     }
 }
